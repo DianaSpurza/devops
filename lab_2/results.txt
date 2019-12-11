@@ -1,6 +1,6 @@
 ============================= test session starts ==============================
 platform linux -- Python 3.7.3, pytest-5.3.1, py-1.8.0, pluggy-0.13.1
-rootdir: /home/diana/devops/lab_2
+rootdir: /home/diana/test/devops/lab_2
 collected 4 items
 
 tests/tests.py ..FF                                                      [100%]
@@ -28,18 +28,18 @@ E           AssertionError: Exception not raised
 
 tests/tests.py:22: AssertionError
 ----------------------------- Captured stdout call -----------------------------
-Time is:  01:40:19 AM
+Time is:  01:53:00 AM
 
 Доброго ранку :)
 
 Date is:  2019-12-12
-========================= 2 failed, 2 passed in 0.98s ==========================
+========================= 2 failed, 2 passed in 0.84s ==========================
 ========================================
 Результат без параметрів: 
 No URL passed to function
 ========================================
 Результат з правильною URL: 
-Time is:  01:40:34 AM
+Time is:  01:53:02 AM
 
 Доброго ранку :)
 
