@@ -1,0 +1,46 @@
+============================= test session starts ==============================
+platform linux -- Python 3.7.3, pytest-5.3.1, py-1.8.0, pluggy-0.13.1
+rootdir: /home/diana/devops/lab_2
+collected 4 items
+
+tests/tests.py ..FF                                                      [100%]
+
+=================================== FAILURES ===================================
+___________________________ TestClass.test_home_work ___________________________
+
+self = <tests.tests.TestClass testMethod=test_home_work>
+
+    def test_home_work(self):
+        # Ваш захист
+>       self.assertTrue(home_work("12 AM 1999") == "good_time")
+E       NameError: name 'home_work' is not defined
+
+tests/tests.py:26: NameError
+______________________ TestClass.test_no_date_in_response ______________________
+
+self = <tests.tests.TestClass testMethod=test_no_date_in_response>
+
+    def test_no_date_in_response(self):
+        # Перевіряємо що у відповіді відсутнє поле дата (тобто передана направильна URL)
+        with self.assertRaises(Exception):
+>           main(self.ip_url)
+E           AssertionError: Exception not raised
+
+tests/tests.py:22: AssertionError
+----------------------------- Captured stdout call -----------------------------
+Time is:  01:40:19 AM
+
+Доброго ранку :)
+
+Date is:  2019-12-12
+========================= 2 failed, 2 passed in 0.98s ==========================
+========================================
+Результат без параметрів: 
+No URL passed to function
+========================================
+Результат з правильною URL: 
+Time is:  01:40:34 AM
+
+Доброго ранку :)
+
+Date is:  2019-12-12
