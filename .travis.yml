@@ -26,8 +26,8 @@ jobs:
       install:
         - cd ./lab_4/
       script:
-        - docker build -t diana33/lab4:django-travis .
-        - docker build -t diana33/lab4:monitoring-travis .
+        - docker build -t diana33/lab4:django-travis --file Dockerfile.django .
+        - docker build -t diana33/lab4:monitoring-travis --file Dockerfile.monitoring .
         - docker images
         - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push diana33/lab4:django-travis; docker push diana33/lab4:monitoring-travis; else echo "PR skip deploy"; fi
     - stage: "Build Lab 5."
